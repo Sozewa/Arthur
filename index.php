@@ -11,21 +11,13 @@ use Kupris\Linear;
 use Kupris\Square;
 
 
-include 'core/EquationInterface.php';
-include 'core/LogInterface.php';
-include 'core/LogAbstract.php';
-include 'Kupris/KuprisException.php';
-include 'Kupris/MyLog.php';
-include 'Kupris/Linear.php';
-include 'Kupris/Square.php';
-
-include BASEURI '/core/EquationInterface.php';
-include BASEURI '/core/LogInterface.php';
-include BASEURI '/core/LogAbstract.php';
-include BASEURI '/Kupris/KuprisException.php';
-include BASEURI '/Kupris/MyLog.php';
-include BASEURI '/Kupris/Linear.php';
-include BASEURI '/Kupris/Square.php';
+include BASEURI . '/core/EquationInterface.php';
+include BASEURI . '/core/LogInterface.php';
+include BASEURI . '/core/LogAbstract.php';
+include BASEURI . '/Kupris/KuprisException.php';
+include BASEURI . '/Kupris/MyLog.php';
+include BASEURI . '/Kupris/Linear.php';
+include BASEURI . '/Kupris/Square.php';
 
 
 
