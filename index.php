@@ -1,5 +1,7 @@
 <?php
 
+define("BASEURI", __DIR__);
+
 ini_set("display_errors", 1);
 error_reporting (-1); 
 
@@ -16,6 +18,14 @@ include 'Kupris/KuprisException.php';
 include 'Kupris/MyLog.php';
 include 'Kupris/Linear.php';
 include 'Kupris/Square.php';
+
+include BASEURI '/core/EquationInterface.php';
+include BASEURI '/core/LogInterface.php';
+include BASEURI '/core/LogAbstract.php';
+include BASEURI '/Kupris/KuprisException.php';
+include BASEURI '/Kupris/MyLog.php';
+include BASEURI '/Kupris/Linear.php';
+include BASEURI '/Kupris/Square.php';
 
 
 
