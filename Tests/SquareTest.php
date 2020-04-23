@@ -4,7 +4,7 @@ namespace Kupris;
 require_once __DIR__.'/../core/EquationInterface.php';
 require_once __DIR__.'./../core/LogAbstract.php';
 require_once __DIR__.'./../core/LogInterface.php';
-require_once __DIR__.'./../Kupris/KuprisException.php';
+require_once __DIR__.'./../Kupris/KuprisExeption.php';
 require_once __DIR__.'./../Kupris/MyLog.php';
 require_once __DIR__.'./../Kupris/Linear.php';
 
@@ -39,17 +39,17 @@ Class SquareTest extends TestCase
   }
 
   /**
-  * @dataProvider providerException
+  * @dataProvider providerExeption
   *  Проверка выбрасывания ошибки
   */
 
-  public function testException($a, $b, $c) : void
+  public function testExeption($a, $b, $c) : void
   {
-    $this->expectException(KuprisException::Class);
+    $this->expectExeption(KuprisExeption::Class);
     $this->square->solve($a, $b, $c);
   }
 
-  public function providerException() : array
+  public function providerExeption() : array
   {
     return array(
       array(0, 0, 0),

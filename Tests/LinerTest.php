@@ -4,7 +4,7 @@ namespace Kupris;
 require_once __DIR__.'/../core/EquationInterface.php';
 require_once __DIR__.'./../core/LogAbstract.php';
 require_once __DIR__.'./../core/LogInterface.php';
-require_once __DIR__.'./../Kupris/KuprisException.php';
+require_once __DIR__.'./../Kupris/KuprisExeption.php';
 require_once __DIR__.'./../Kupris/MyLog.php';
 require_once __DIR__.'./../Kupris/Linear.php';
 
@@ -60,13 +60,13 @@ Class LinearTest extends TestCase
   *  Проверка выбрасывания ошибки
   */
 
-  public function testException($a, $b) : void
+  public function testExeption($a, $b) : void
   {
-    $this->expectException(KuprisException::Class);
+    $this->expectExeption(KuprisExeption::Class);
     $this->linear->linearEquation($a, $b);
   }
 
-  public function providerException() : array
+  public function providerExeption() : array
   {
     return array(
       array(0, 2),
