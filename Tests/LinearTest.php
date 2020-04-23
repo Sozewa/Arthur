@@ -8,32 +8,27 @@ include_once __DIR__ . '/../Kupris/Linear.php';
 include_once __DIR__ . '/../Kupris/Square.php';
 include_once __DIR__ . '/../Kupris/KuprisExeption.php';
 include_once __DIR__ . '/../Kupris/Log.php';
-class SquareTest extends TestCase {
-	public function testSquare1() : void
+class LinearTest extends TestCase {
+	public function testLinear1() : void
 	{
-		$a= new Kupris\Square();
-	    $this->assertEquals([3,2],$a->solve(1, -5, 6));
+		$a = new Kupris\Linear();
+		$this->assertEquals([-2],$a->linear(5,10));
 	}
-	public function testSquare2() : void
+	public function testLinear2() : void
 	{
-        $a= new Kupris\Square();
-        $this->assertEquals([0,-3],$a->solve(4, 12, 0));
-	}
-	public function testSquare3() : void
-	{
-        $a= new Kupris\Square();
-        $this->assertEquals([0],$a->solve(7, 0, 0));
+        $a = new Kupris\Linear();
+        $this->assertEquals([0],$a->linear(5,0));
 	}
 	public function testExpectExeption1() : void
 	{
-        $a= new Kupris\Square();
+        $a = new Kupris\Linear();
         $this->expectExeption(Kupris\KuprisExeption::class);
-        $a->solve(0,0,7);
+        $a->linear(0,5);
 	}
 	public function testExpectExeption2() : void
 	{
-        $a= new Kupris\Square();
+        $a = new Kupris\Linear();
         $this->expectExeption(Kupris\KuprisExeption::class);
-        $a->solve(4,0,36);
+        $a->linear(0,0);
 	}
 }
